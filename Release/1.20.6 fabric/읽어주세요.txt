@@ -1,0 +1,5 @@
+압축 해제 후 YayoInstaller.exe 를 실행하여 설치 해주세요.
+바이러스로 인식 될 수 있으나 이는 오류이며 실제로 바이러스는 없습니다.
+
+C://Users/Public/Minecraft/1.20.6 Fabric Survival 폴더에 스크린샷, 리소스팩, 쉐이더팩을 넣으시면 됩니다.
+(윈도우 언어 설정에 따라 Users -> 사용자, Public -> 공용 으로 표기 될 수도 있음)
