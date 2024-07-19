@@ -1,4 +1,5 @@
 #pyinstaller --uac-admin  --icon="C:\Users\user\Documents\NSIS\icon.ico" "C:\Users\user\Desktop\Github\MinecraftInstaller\storage\Release\1.20.1 jujutsu\main.py"
+#pyinstaller --uac-admin  --icon="C:\Users\user\Documents\NSIS\icon.ico" "C:\Users\Administrator\Desktop\Minecraft_Installer\Release\1.20.1 jujutsu\main.py"
 import os
 from requests import get
 import zipfile
@@ -25,8 +26,9 @@ else:
 
 if __name__ == '__main__':
 
-    if os.path.isdir(f'C:/Users/Public/Minecraft/{file1}/'):
-        shutil.rmtree(f'C:/Users/Public/Minecraft/{file1}/')
+    if os.path.isdir('C:/Users/Public/Minecraft/1.20.1_Jujutsu/'):
+        print("중복 폴더 삭제중\n")
+        shutil.rmtree('C:/Users/Public/Minecraft/1.20.1_Jujutsu/')
     else:
         pass
 
