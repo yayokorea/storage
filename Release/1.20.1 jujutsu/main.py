@@ -15,6 +15,7 @@ storage = '1.20.1_Jujutsu_Craft/'
 file1 = '1.20.1_Jujutsu.zip'
 file2 = "JUJUTSU_1.20.1.zip"
 file3 = "minecraftforge.zip"
+file4 = "minecraft.zip"
 version = "JUJUTSU_1.20.1"
 
 if os.path.isdir(temp):
@@ -47,28 +48,35 @@ if __name__ == '__main__':
     url_1 = f"{github}{storage}{file1}"
     url_2 = f"{github}{storage}{file2}"
     url_3 = f"{github}{storage}{file3}"
+    url_4 = f"{github}{storage}{file4}"
 
     print(f"{file1} 다운로드중")
     download(url_1,f"{temp}{file1}")
-    print(f"{file2} 다운로드중\n")
+    print(f"{file2} 다운로드중")
     download(url_2,f"{temp}{file2}")
-    print(f"{file3} 설치중")
+    print(f"{file3} 다운로드중")
     download(url_3,f"{temp}{file3}")
+    print(f"{file4} 다운로드중\n")
+    download(url_4,f"{temp}{file4}")
 
     print(f"{file1} 압축해제중")
     zipfile.ZipFile(f'{temp}{file1}').extractall(path='C:/Users/Public/Minecraft/')
-    print(f"{file2} 압축해제중\n")
+    print(f"{file2} 압축해제중")
     zipfile.ZipFile(f'{temp}{file2}').extractall(path=f'{minecraft}versions/')
     print(f"{file3} 압축해제중")
     zipfile.ZipFile(f'{temp}{file3}').extractall(path=f'{minecraft}libraries/net/')
+    print(f"{file4} 압축해제중\n")
+    zipfile.ZipFile(f'{temp}{file4}').extractall(path=f'{minecraft}libraries/net/')
 
     print(f"{file1} 삭제중")
     os.remove(f'{temp}{file1}')
-    print(f"{file2} 삭제중\n")
+    print(f"{file2} 삭제중")
     os.remove(f'{temp}{file2}')
     print(f"{file3} 삭제중")
     os.remove(f'{temp}{file3}')
-    
+    print(f"{file4} 삭제중\n")
+    os.remove(f'{temp}{file4}')
+
     print('설치 완료!\n')
     os.system('pause')
 
