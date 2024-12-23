@@ -110,7 +110,7 @@ func main() {
 		fmt.Println()
 
 		// 압축 해제
-		fmt.Printf("   %s 압축 해제 중...", fileName)
+		fmt.Printf("   %s 압축 해제 중...\n", fileName)
 		unzip(tempFile, dest)
 		fmt.Println()
 
@@ -127,8 +127,10 @@ func main() {
 	fmt.Println("==========================================")
 	fmt.Println()
 
-	fmt.Println("계속하려면 Enter 키를 누르세요...")
-	fmt.Scanln()
+	fmt.Println("종료하려면  누르세요...")
+	var input string
+	fmt.Scanln(&input)
+	fmt.Scanln(&input)
 }
 
 func downloadFile(url string, dest string) {
@@ -243,22 +245,34 @@ func unzip(src string, dest string) {
 }
 
 func updateProfile(launcherProfiles string, profileURL string, version string) {
-	if _, err := os.Stat(launcherProfiles); os.IsNotExist(err) {
-		panic(fmt.Sprintf("launcher_profiles.json 파일을 찾을 수 없습니다: %s", launcherProfiles))
-	}
-
 	var jsonData map[string]interface{}
-	file, err := os.Open(launcherProfiles)
-	if err != nil {
-		panic(fmt.Sprintf("launcher_profiles.json 열기 실패: %v", err))
-	}
-	defer file.Close()
 
-	decoder := json.NewDecoder(file)
-	if err := decoder.Decode(&jsonData); err != nil {
-		panic(fmt.Sprintf("launcher_profiles.json 파싱 실패: %v", err))
+	// launcher_profiles.json 파일이 없으면 기본 구조로 생성
+	if _, err := os.Stat(launcherProfiles); os.IsNotExist(err) {
+		jsonData = map[string]interface{}{
+			"profiles":       map[string]interface{}{},
+			"settings":       map[string]interface{}{},
+			"version_groups": []interface{}{},
+		}
+		// 디렉토리가 없다면 생성
+		if err := os.MkdirAll(filepath.Dir(launcherProfiles), os.ModePerm); err != nil {
+			panic(fmt.Sprintf("디렉토리 생성 실패: %v", err))
+		}
+	} else {
+		// 파일이 있으면 읽기
+		file, err := os.Open(launcherProfiles)
+		if err != nil {
+			panic(fmt.Sprintf("launcher_profiles.json 열기 실패: %v", err))
+		}
+		defer file.Close()
+
+		decoder := json.NewDecoder(file)
+		if err := decoder.Decode(&jsonData); err != nil {
+			panic(fmt.Sprintf("launcher_profiles.json 파싱 실패: %v", err))
+		}
 	}
 
+	// 프로파일 다운로드 및 추가
 	resp, err := http.Get(profileURL)
 	if err != nil {
 		panic(fmt.Sprintf("프로파일 다운로드 실패: %v", err))
@@ -273,6 +287,7 @@ func updateProfile(launcherProfiles string, profileURL string, version string) {
 	profiles := jsonData["profiles"].(map[string]interface{})
 	profiles[version] = profileData
 
+	// 파일 저장
 	launcherFile, err := os.Create(launcherProfiles)
 	if err != nil {
 		panic(fmt.Sprintf("launcher_profiles.json 쓰기 실패: %v", err))
@@ -280,7 +295,7 @@ func updateProfile(launcherProfiles string, profileURL string, version string) {
 	defer launcherFile.Close()
 
 	encoder := json.NewEncoder(launcherFile)
-	encoder.SetIndent("", "\t")
+	encoder.SetIndent("", "  ")
 	if err := encoder.Encode(jsonData); err != nil {
 		panic(fmt.Sprintf("launcher_profiles.json 업데이트 실패: %v", err))
 	}
