@@ -1,0 +1,10 @@
+아이콘 만들기
+rsrc -ico icon.ico
+
+파워쉘에서 사용
+$env:GOARCH="amd64"
+$env:GOOS="windows"
+go build -ldflags="-s -w" -o myprogram.exe
+
+cmd에서 사용
+upx --best --lzma myprogram.exe
