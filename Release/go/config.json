@@ -1,0 +1,38 @@
+{
+    "versions": [
+        {
+            "name": "YAYO_1.21",
+            "display_name": "YAYO 1.21 야생 모드팩",
+            "files": [
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.21_Fabric/1.21_Fabric_Survival.zip",
+                    "destination": "C:\\Users\\Public\\Minecraft"
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.21_Fabric/YAYO_1.21.zip",
+                    "destination": "%APPDATA%\\.minecraft\\versions"
+                }
+            ],
+            "profile": {
+                "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.21_Fabric/profile.json"
+            }
+        },
+        {
+            "name": "YAYO_1.21.1",
+            "display_name": "YAYO 1.21.1 크리에이티브 모드팩",
+            "files": [
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.21.1_Fabric/1.21.1_Creative.zip",
+                    "destination": "C:\\Users\\Public\\Minecraft"
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.21.1_Fabric/fabric-loader-0.16.8-1.21.1.zip",
+                    "destination": "%APPDATA%\\.minecraft\\versions"
+                }
+            ],
+            "profile": {
+                "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.21.1_Fabric/profile.json"
+            }
+        }
+    ]
+}

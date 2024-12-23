@@ -16,17 +16,12 @@ type FileConfig struct {
 	Destination string `json:"destination"`
 }
 
-type VersionConfig struct {
-	Name        string       `json:"name"`
-	DisplayName string       `json:"display_name"`
-	Files       []FileConfig `json:"files"`
-	Profile     struct {
+type Config struct {
+	Name    string       `json:"name"`
+	Files   []FileConfig `json:"files"`
+	Profile struct {
 		URL string `json:"url"`
 	} `json:"profile"`
-}
-
-type Config struct {
-	Versions []VersionConfig `json:"versions"`
 }
 
 func main() {
@@ -36,8 +31,8 @@ func main() {
 	fmt.Println()
 
 	// 설정 파일 다운로드
-	fmt.Println("=== 설정 파일 다운로드 중... ===")
-	configURL := "https://raw.githubusercontent.com/yayokorea/storage/main/Release/go/config.json"
+	fmt.Println("=== 설정 파일 다운로드 ===")
+	configURL := "http://58.231.82.19:8000/config.json"
 	resp, err := http.Get(configURL)
 	if err != nil {
 		panic(fmt.Sprintf("설정 파일 다운로드 실패: %v", err))
@@ -48,32 +43,6 @@ func main() {
 	if err := json.NewDecoder(resp.Body).Decode(&config); err != nil {
 		panic(fmt.Sprintf("설정 파일 파싱 실패: %v", err))
 	}
-	fmt.Println("   ✓ 설정 파일 다운로드 완료")
-	fmt.Println()
-
-	// 버전 선택
-	fmt.Println("=== 설치할 버전을 선택하세요 ===")
-	for i, version := range config.Versions {
-		fmt.Printf("%d. %s\n", i+1, version.DisplayName)
-	}
-	fmt.Print("\n선택 (1-", len(config.Versions), "): ")
-
-	var choice int
-	for {
-		_, err := fmt.Scanf("%d", &choice)
-		if err != nil {
-			fmt.Print("잘못된 입력입니다. 다시 선택해주세요: ")
-			continue
-		}
-		if choice < 1 || choice > len(config.Versions) {
-			fmt.Print("잘못된 번호입니다. 다시 선택해주세요: ")
-			continue
-		}
-		break
-	}
-
-	selectedVersion := config.Versions[choice-1]
-	fmt.Printf("\n'%s' 설치를 시작합니다.\n\n", selectedVersion.DisplayName)
 
 	// 환경 변수 처리
 	appData := os.Getenv("APPDATA")
@@ -86,7 +55,7 @@ func main() {
 	fmt.Println("   launcher_profile.json 수정 중...")
 
 	launcherProfiles := filepath.Join(appData, ".minecraft", "launcher_profiles.json")
-	updateProfile(launcherProfiles, selectedVersion.Profile.URL, selectedVersion.Name)
+	updateProfile(launcherProfiles, config.Profile.URL, config.Name)
 
 	fmt.Println("   ✓ 프로파일 설정 완료")
 	fmt.Println()
@@ -96,7 +65,7 @@ func main() {
 	os.MkdirAll(tempDir, os.ModePerm)
 
 	fmt.Println("=== 파일 다운로드 및 설치 ===")
-	for _, file := range selectedVersion.Files {
+	for _, file := range config.Files {
 		// 환경 변수 치환
 		dest := strings.Replace(file.Destination, "%APPDATA%", appData, -1)
 
@@ -110,13 +79,13 @@ func main() {
 		fmt.Println()
 
 		// 압축 해제
-		fmt.Printf("   %s 압축 해제 중...", fileName)
+		fmt.Printf("   %s 압축 해제 중...\n", fileName)
 		unzip(tempFile, dest)
 		fmt.Println()
 
 		// 임시 파일 삭제
 		os.Remove(tempFile)
-		fmt.Printf("   ✓ %s 삭제 완료\n", fileName)
+		fmt.Printf("   • %s 삭제 완료\n", fileName)
 	}
 	fmt.Println()
 
