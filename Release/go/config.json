@@ -33,6 +33,40 @@
             "profile": {
                 "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.21.1_Fabric/profile.json"
             }
+        },
+        {
+            "name": "1.20.6_YAYO",
+            "display_name": "YAYO 1.20.6 야생 모드팩",
+            "files": [
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.6_Fabric/1.20.6 Fabric Survival.zip",
+                    "destination": "C:\\Users\\Public\\Minecraft"
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.6_Fabric/YAYO_1.20.6.zip",
+                    "destination": "%APPDATA%\\.minecraft\\versions"
+                }
+            ],
+            "profile": {
+                "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.6_Fabric/profile.json"
+            }
+        },
+        {
+            "name": "1.20.1_Jujutsu_Craft",
+            "display_name": "YAYO 1.20.1 주술회전 모드팩",
+            "files": [
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.6_Fabric/1.20.6 Fabric Survival.zip",
+                    "destination": "C:\\Users\\Public\\Minecraft"
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.6_Fabric/YAYO_1.20.6.zip",
+                    "destination": "%APPDATA%\\.minecraft\\versions"
+                }
+            ],
+            "profile": {
+                "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.6_Fabric/profile.json"
+            }
         }
     ]
 }
