@@ -127,7 +127,7 @@ func main() {
 	fmt.Println("==========================================")
 	fmt.Println()
 
-	fmt.Println("종료하려면  누르세요...")
+	fmt.Println("종료하려면 Enter 키를 누르세요...")
 	var input string
 	fmt.Scanln(&input)
 	fmt.Scanln(&input)
