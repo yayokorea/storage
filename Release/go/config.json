@@ -1,6 +1,73 @@
 {
     "versions": [
         {
+            "name": "1.20.1_Jujutsu_Craft",
+            "display_name": "YAYO 1.20.1 황혼의숲 모드팩",
+            "files": [
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.1_Forge_Twilight_Forest/1.20.1_YAYO_Forge.zip",
+                    "destination": "C:\\Users\\Public\\Minecraft"
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.1_Forge_Twilight_Forest/YAYO_1.20.1.zip",
+                    "destination": "%APPDATA%\\.minecraft\\versions"
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.1_Forge_Twilight_Forest/minecraftforge.zip",
+                    "destination": "%APPDATA%\\.minecraft\\libraries\\net"
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.1_Forge_Twilight_Forest/minecraft.zip",
+                    "destination": "%APPDATA%\\.minecraft\\libraries\\net"
+                }
+            ],
+            "profile": {
+                "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.1_Forge_Twilight_Forest/profile.json"
+            }
+        },
+        {
+            "name": "1.20.1_Forge_Twilight_Forest",
+            "display_name": "YAYO 1.20.1 주술회전 모드팩",
+            "files": [
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.1_Jujutsu_Craft/1.20.1_Jujutsu.zip",
+                    "destination": "C:\\Users\\Public\\Minecraft"
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.1_Jujutsu_Craft/JUJUTSU_1.20.1.zip",
+                    "destination": "%APPDATA%\\.minecraft\\versions"
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.1_Jujutsu_Craft/minecraftforge.zip",
+                    "destination": "%APPDATA%\\.minecraft\\libraries\\net"
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.1_Jujutsu_Craft/minecraft.zip",
+                    "destination": "%APPDATA%\\.minecraft\\libraries\\net"
+                }
+            ],
+            "profile": {
+                "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.1_Jujutsu_Craft/profile.json"
+            }
+        },
+        {
+            "name": "1.20.6_YAYO",
+            "display_name": "YAYO 1.20.6 야생 모드팩",
+            "files": [
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.6_Fabric/1.20.6 Fabric Survival.zip",
+                    "destination": "C:\\Users\\Public\\Minecraft"
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.6_Fabric/YAYO_1.20.6.zip",
+                    "destination": "%APPDATA%\\.minecraft\\versions"
+                }
+            ],
+            "profile": {
+                "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.6_Fabric/profile.json"
+            }
+        },
+        {
             "name": "YAYO_1.21",
             "display_name": "YAYO 1.21 야생 모드팩",
             "files": [
@@ -32,40 +99,6 @@
             ],
             "profile": {
                 "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.21.1_Fabric/profile.json"
-            }
-        },
-        {
-            "name": "1.20.6_YAYO",
-            "display_name": "YAYO 1.20.6 야생 모드팩",
-            "files": [
-                {
-                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.6_Fabric/1.20.6 Fabric Survival.zip",
-                    "destination": "C:\\Users\\Public\\Minecraft"
-                },
-                {
-                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.6_Fabric/YAYO_1.20.6.zip",
-                    "destination": "%APPDATA%\\.minecraft\\versions"
-                }
-            ],
-            "profile": {
-                "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.6_Fabric/profile.json"
-            }
-        },
-        {
-            "name": "1.20.1_Jujutsu_Craft",
-            "display_name": "YAYO 1.20.1 주술회전 모드팩",
-            "files": [
-                {
-                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.6_Fabric/1.20.6 Fabric Survival.zip",
-                    "destination": "C:\\Users\\Public\\Minecraft"
-                },
-                {
-                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.6_Fabric/YAYO_1.20.6.zip",
-                    "destination": "%APPDATA%\\.minecraft\\versions"
-                }
-            ],
-            "profile": {
-                "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.20.6_Fabric/profile.json"
             }
         }
     ]

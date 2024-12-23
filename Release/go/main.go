@@ -117,6 +117,7 @@ func main() {
 		// 임시 파일 삭제
 		os.Remove(tempFile)
 		fmt.Printf("   ✓ %s 삭제 완료\n", fileName)
+		fmt.Println()
 	}
 	fmt.Println()
 
