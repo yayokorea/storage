@@ -100,6 +100,23 @@
             "profile": {
                 "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.21.1_Fabric/profile.json"
             }
+        },
+                {
+            "name": "1.21_DistantHorizons",
+            "display_name": "YAYO 1.21 DistantHorizons 모드팩",
+            "files": [
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.21_DistantHorizons/1.21_DistantHorizons.zip",
+                    "destination": "C:\\Users\\Public\\Minecraft"
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.21_DistantHorizons/YAYO_1.21.zip",
+                    "destination": "%APPDATA%\\.minecraft\\versions"
+                }
+            ],
+            "profile": {
+                "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.21_DistantHorizons/profile.json"
+            }
         }
     ]
 }
