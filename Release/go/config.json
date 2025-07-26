@@ -117,6 +117,23 @@
             "profile": {
                 "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.21_DistantHorizons/profile.json"
             }
+        },
+                        {
+            "name": "1.16.5_Vanila",
+            "display_name": "YAYO 1.16.5 바닐라",
+            "files": [
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.16.5_Vanila/1.16.5_Vanila.zip",
+                    "destination": "C:\\Users\\Public\\Minecraft"
+                },
+                {
+                    "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.16.5_Vanila/1.16.5.zip",
+                    "destination": "%APPDATA%\\.minecraft\\versions"
+                }
+            ],
+            "profile": {
+                "url": "https://raw.githubusercontent.com/yayokorea/storage/main/1.16.5_Vanila/profile.json"
+            }
         }
     ]
 }
