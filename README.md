@@ -1,73 +1,107 @@
-# 야요의 마크 간편설치기 스토리지
-마인크래프트의 모드, 설정들을 한 번에 적용하기 위해 만들어진 간편설치기
+# 야요의 마인크래프트 간편설치기 스토리지
 
+이 저장소는 마인크래프트 모드팩 및 관련 파일들을 쉽고 빠르게 설치할 수 있도록 돕는 간편설치기 및 파일들을 제공합니다. 다양한 마인크래프트 버전과 모드 로더(Forge, Fabric)를 지원하며, 게임 디렉토리 설정 및 프로파일 관리를 자동화합니다.
 
+## 🚀 주요 기능
 
-## 소개
-* 파이썬으로 만들어진 간편설치기
-* 포지, 패브릭 프로파일 간편 설정
-* 게임 디렉터리 폴더 간편 설정 (모드, 설정 등)
+*   **다양한 마인크래프트 버전 및 모드팩 지원**: 1.16.5부터 1.21.1까지 다양한 버전의 모드팩을 제공합니다.
+*   **자동화된 간편설치기**: Python 및 Go 기반의 실행 파일을 통해 복잡한 설치 과정을 자동화합니다.
+*   **Forge 및 Fabric 프로파일 간편 설정**: 모드 로더 프로파일 설정을 자동으로 처리합니다.
+*   **게임 디렉토리 자동 설정**: 모드, 설정 파일 등을 올바른 경로에 자동으로 배치합니다.
+*   **리소스팩 및 쉐이더 제공**: 게임의 시각적 경험을 향상시킬 수 있는 추가 파일들을 포함합니다.
 
-## 파일 소개
-| **1.16.5_Vanila** |    **분류**   |
-|:--------------------------------:|:-------------:|
-| [1.16.5_Vanila.zip](https://github.com/yayokorea/storage/blob/main/1.16.5_Vanila/1.16.5_Vanila.zip) | 게임 디렉터리 |
-| [1.16.5.zip](https://github.com/yayokorea/storage/blob/main/1.16.5_Vanila/1.16.5.zip) | 버전 폴더 |
-| [POISON Resource Pack 1.16.5.zip](https://github.com/yayokorea/storage/blob/main/1.16.5_Vanila/POISON%20Resource%20Pack%201.16.5.zip) | 리소스팩 |
-| [profile.json](https://github.com/yayokorea/storage/blob/main/1.16.5_Vanila/profile.json) | 설치 설정 |
+## 📂 저장소 구조 및 내용
 
-| **1.20.1_Forge_Twilight_Forest** |    **분류**   |
-|:--------------------------------:|:-------------:|
-|       [1.20.1_YAYO_Forge.zip](https://github.com/yayokorea/storage/blob/main/1.20.1_Forge_Twilight_Forest/1.20.1_YAYO_Forge.zip)      | 게임 디렉터리 |
-|          [YAYO_1.20.1.zip](https://github.com/yayokorea/storage/blob/main/1.20.1_Forge_Twilight_Forest/YAYO_1.20.1.zip)         |   버전 폴더   |
-|           [minecraft.zip](https://github.com/yayokorea/storage/blob/main/1.20.1_Forge_Twilight_Forest/minecraft.zip)          | 라이브러리    |
-| [minecraftforge.zip](https://github.com/yayokorea/storage/blob/main/1.20.1_Forge_Twilight_Forest/minecraftforge.zip)               | 라이브러리    |
-|           [profile.json](https://github.com/yayokorea/storage/blob/main/1.20.1_Forge_Twilight_Forest/profile.json)           |   설치 설정   |
+이 저장소는 다음과 같은 주요 폴더와 파일들로 구성되어 있습니다:
 
-| **1.20.1_Jujutsu_Craft** |    **분류**   |
-|:--------------------------------:|:-------------:|
-| [1.20.1_Jujutsu.zip](https://github.com/yayokorea/storage/blob/main/1.20.1_Jujutsu_Craft/1.20.1_Jujutsu.zip) | 게임 디렉터리 |
-| [JUJUTSU_1.20.1.zip](https://github.com/yayokorea/storage/blob/main/1.20.1_Jujutsu_Craft/JUJUTSU_1.20.1.zip) | 버전 폴더 |
-| [minecraft.zip](https://github.com/yayokorea/storage/blob/main/1.20.1_Jujutsu_Craft/minecraft.zip) | 라이브러리 |
-| [minecraftforge.zip](https://github.com/yayokorea/storage/blob/main/1.20.1_Jujutsu_Craft/minecraftforge.zip) | 라이브러리 |
-| [profile.json](https://github.com/yayokorea/storage/blob/main/1.20.1_Jujutsu_Craft/profile.json) | 설치 설정 |
+### 🎥 사용 가이드 영상
 
-|     **1.20.6_Fabric**    |    **분류**   |
-|:--------------------------:|:-------------:|
-| [1.20.6 Fabric Survival.zip](https://github.com/yayokorea/storage/blob/main/1.20.6_Fabric/1.20.6%20Fabric%20Survival.zip) | 게임 디렉터리 |
-| [YAYO_1.20.6.zip](https://github.com/yayokorea/storage/blob/main/1.20.6_Fabric/YAYO_1.20.6.zip)            | 버전 폴더     |
-| [profile.json](https://github.com/yayokorea/storage/blob/main/1.20.6_Fabric/profile.json)               | 설치 설정     |
+*   `마크 간편설치기 설치 방법.mp4`: 간편설치기 사용 방법에 대한 영상 가이드입니다.
+*   `마크 디코 연동 방법.mp4`: 마인크래프트와 디스코드 연동 방법에 대한 영상 가이드입니다.
 
-| **1.21_DistantHorizons** |    **분류**   |
-|:--------------------------------:|:-------------:|
-| [1.21_DistantHorizons.zip](https://github.com/yayokorea/storage/blob/main/1.21_DistantHorizons/1.21_DistantHorizons.zip) | 게임 디렉터리 |
-| [YAYO_1.21.zip](https://github.com/yayokorea/storage/blob/main/1.21_DistantHorizons/YAYO_1.21.zip) | 버전 폴더 |
-| [profile.json](https://github.com/yayokorea/storage/blob/main/1.21_DistantHorizons/profile.json) | 설치 설정 |
+### 📦 버전별 모드팩 파일
 
-| **1.21_Fabric** |    **분류**   |
-|:--------------------------------:|:-------------:|
-| [1.21_Fabric_Survival.zip](https://github.com/yayokorea/storage/blob/main/1.21_Fabric/1.21_Fabric_Survival.zip) | 게임 디렉터리 |
-| [YAYO_1.21.zip](https://github.com/yayokorea/storage/blob/main/1.21_Fabric/YAYO_1.21.zip) | 버전 폴더 |
-| [profile.json](https://github.com/yayokorea/storage/blob/main/1.21_Fabric/profile.json) | 설치 설정 |
+각 폴더는 특정 마인크래프트 버전 및 모드팩에 필요한 파일들을 담고 있습니다.
 
-| **1.21.1_Fabric** |    **분류**   |
-|:--------------------------------:|:-------------:|
-| [1.21.1_Creative.zip](https://github.com/yayokorea/storage/blob/main/1.21.1_Fabric/1.21.1_Creative.zip) | 게임 디렉터리 |
-| [fabric-loader-0.16.8-1.21.1.zip](https://github.com/yayokorea/storage/blob/main/1.21.1_Fabric/fabric-loader-0.16.8-1.21.1.zip) | 버전 폴더 |
-| [profile.json](https://github.com/yayokorea/storage/blob/main/1.21.1_Fabric/profile.json) | 설치 설정 |
+*   **`1.16.5_Vanila/`**: 마인크래프트 1.16.5 바닐라 버전 관련 파일
+    *   `1.16.5_Vanila.zip`: 게임 디렉토리 파일
+    *   `1.16.5.zip`: 버전 폴더 파일
+    *   `POISON Resource Pack 1.16.5.zip`: 리소스팩
+    *   `profile.json`: 설치 설정 파일
 
-| **Pack** |    **분류**   |
-|:--------------------------------:|:-------------:|
-| [ComplementaryReimagined_r5.1.1.zip](https://github.com/yayokorea/storage/blob/main/Pack/ComplementaryReimagined_r5.1.1.zip) | 쉐이더 |
-| [MakeUp-UltraFast-8.9f.zip](https://github.com/yayokorea/storage/blob/main/Pack/MakeUp-UltraFast-8.9f.zip) | 쉐이더 |
-| [VanillaTweaks_r324720.zip](https://github.com/yayokorea/storage/blob/main/Pack/VanillaTweaks_r324720.zip) | 리소스팩 |
-| [VanillaTweaks_r905100_MC1.21.x.zip](https://github.com/yayokorea/storage/blob/main/Pack/VanillaTweaks_r905100_MC1.21.x.zip) | 리소스팩 |
+*   **`1.20.1_Forge_Twilight_Forest/`**: 마인크래프트 1.20.1 Forge 황혼의 숲 모드팩 관련 파일
+    *   `1.20.1_YAYO_Forge.zip`: 게임 디렉토리 파일
+    *   `YAYO_1.20.1.zip`: 버전 폴더 파일
+    *   `minecraft.zip`: 라이브러리 파일
+    *   `minecraftforge.zip`: 라이브러리 파일
+    *   `profile.json`: 설치 설정 파일
 
-|  **Release**  |         **분류**         |
-|:-------------:|:------------------------:|
-| [1.20.1 forge](https://github.com/yayokorea/storage/tree/main/Release/1.20.1%20forge)  | 1.20.1 Forge 황혼의 숲 간편설치기  |
-| [1.20.1 jujutsu](https://github.com/yayokorea/storage/tree/main/Release/1.20.1%20jujutsu)  | 1.20.1 Forge 주술회전 간편설치기  |
-| [1.20.6 fabric](https://github.com/yayokorea/storage/tree/main/Release/1.20.6%20fabric) | 1.20.6 Fabric 야생 모드팩 간편설치기 |
-| [1.21 fabric](https://github.com/yayokorea/storage/tree/main/Release/1.21%20fabric) | 1.21 Fabric 야생 모드팩 간편설치기 |
-| [1.21.1 fabric](https://github.com/yayokorea/storage/tree/main/Release/1.21.1%20fabric) | 1.21.1 Fabric 야생 모드팩 간편설치기 |
-| [go](https://github.com/yayokorea/storage/tree/main/Release/go) | YayoInstaller Go 버전 |
+*   **`1.20.1_Jujutsu_Craft/`**: 마인크래프트 1.20.1 Forge 주술회전 모드팩 관련 파일
+    *   `1.20.1_Jujutsu.zip`: 게임 디렉토리 파일
+    *   `JUJUTSU_1.20.1.zip`: 버전 폴더 파일
+    *   `minecraft.zip`: 라이브러리 파일
+    *   `minecraftforge.zip`: 라이브러리 파일
+    *   `profile.json`: 설치 설정 파일
+
+*   **`1.20.6_Fabric/`**: 마인크래프트 1.20.6 Fabric 야생 모드팩 관련 파일
+    *   `1.20.6 Fabric Survival.zip`: 게임 디렉토리 파일
+    *   `YAYO_1.20.6.zip`: 버전 폴더 파일
+    *   `profile.json`: 설치 설정 파일
+
+*   **`1.21_DistantHorizons/`**: 마인크래프트 1.21 Distant Horizons 모드팩 관련 파일
+    *   `1.21_DistantHorizons.zip`: 게임 디렉토리 파일
+    *   `YAYO_1.21.zip`: 버전 폴더 파일
+    *   `profile.json`: 설치 설정 파일
+
+*   **`1.21_Fabric/`**: 마인크래프트 1.21 Fabric 야생 모드팩 관련 파일
+    *   `1.21_Fabric_Survival.zip`: 게임 디렉토리 파일
+    *   `YAYO_1.21.zip`: 버전 폴더 파일
+    *   `profile.json`: 설치 설정 파일
+
+*   **`1.21.1_Fabric/`**: 마인크래프트 1.21.1 Fabric 크리에이티브 모드팩 관련 파일
+    *   `1.21.1_Creative.zip`: 게임 디렉토리 파일
+    *   `fabric-loader-0.16.8-1.21.1.zip`: 버전 폴더 파일
+    *   `profile.json`: 설치 설정 파일
+
+### 🎨 리소스팩 및 쉐이더
+
+*   **`Pack/`**: 게임의 시각적 요소를 개선하기 위한 리소스팩 및 쉐이더 파일
+    *   `ComplementaryReimagined_r5.1.1.zip`: 쉐이더 팩
+    *   `MakeUp-UltraFast-8.9f.zip`: 쉐이더 팩
+    *   `VanillaTweaks_r324720.zip`: 리소스팩
+    *   `VanillaTweaks_r905100_MC1.21.x.zip`: 리소스팩
+
+### ⚙️ 간편설치기 실행 파일
+
+*   **`Release/`**: 컴파일된 간편설치기 실행 파일 및 해당 소스 코드
+    *   **`1.20.1 forge/`**: 1.20.1 Forge 황혼의 숲 모드팩 설치기
+        *   `main.exe`: 실행 파일
+        *   `main.py`: Python 소스 코드
+    *   **`1.20.1 jujutsu/`**: 1.20.1 Forge 주술회전 모드팩 설치기
+        *   `Jujutsu_Installer.exe`: 실행 파일
+        *   `main.py`: Python 소스 코드
+    *   **`1.20.6 fabric/`**: 1.20.6 Fabric 야생 모드팩 설치기
+        *   `main.exe`: 실행 파일
+        *   `main.py`: Python 소스 코드
+    *   **`1.21 fabric/`**: 1.21 Fabric 야생 모드팩 설치기
+        *   `main.exe`: 실행 파일
+        *   `main.py`: Python 소스 코드
+    *   **`1.21.1 fabric/`**: 1.21.1 Fabric 크리에이티브 모드팩 설치기
+        *   `main.exe`: 실행 파일
+        *   `main.py`: Python 소스 코드
+    *   **`go/`**: Go 언어로 개발된 간편설치기
+        *   `YayoInstaller.exe`: 실행 파일
+        *   `main.go`: Go 소스 코드
+        *   `사용법.txt`: 사용법 설명
+
+## 💡 사용 방법
+
+### 간편설치기 사용 (권장)
+
+1.  `Release/` 폴더에서 원하는 마인크래프트 버전 및 모드팩에 해당하는 설치기 폴더로 이동합니다.
+2.  해당 폴더 내의 `.exe` 실행 파일을 더블 클릭하여 실행합니다.
+3.  설치기의 안내에 따라 마인크래프트 모드팩을 쉽고 빠르게 설치할 수 있습니다.
+
+### 수동 설치
+
+각 버전 폴더 내의 `.zip` 파일들을 직접 다운로드하여 마인크래프트 설치 경로에 맞게 압축을 해제하고 설정할 수 있습니다. `profile.json` 파일은 설치 설정 정보를 포함하고 있으니 참고하십시오.
