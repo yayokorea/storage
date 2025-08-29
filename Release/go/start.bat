@@ -1,0 +1,2 @@
+"./YayoInstaller.exe"
+pause
